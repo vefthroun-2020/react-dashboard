@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import ToDoList from "./components/ToDoList";
+import Weather from "./components/Weather";
+import ImageOfTheDay from "./components/ImageOfTheDay";
+import Clock from "./components/Clock";
 
 function App() {
+  // JSX
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <Weather city="Reykjavík" />
+        <Weather city="Sakskobing" />
+      </div>
+
+      <div>
+        <ToDoList />
+      </div>
+
+      <div>
+        <Clock />
+      </div>
+
+      <div>
+        <ImageOfTheDay />
+      </div>
     </div>
   );
 }
